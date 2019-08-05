@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
-  get 'reviews/create'
-  get 'drugs/index'
-  get 'drugs/show'
-  get 'drugs/new'
-  get 'drugs/create'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root to: "drugs#index"
+  resources :drugs, only: [:index, :show, :new, :create] do
+    resources :reviews, only: [:create]
+  end
 end
