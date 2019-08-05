@@ -6,7 +6,7 @@ class ReviewsController < ApplicationController
     if @review.save
       redirect_to drug_path(@drug)
     else
-      render "drugs/show"
+      render 'drugs/show'
     end
   end
 
