@@ -23,6 +23,12 @@ class DrugsController < ApplicationController
     end
   end
 
+  def destroy
+    @drug = Drug.find(params[:id])
+    @drug.destroy
+    redirect_to drugs_path
+  end
+
   private
 
   def drug_params

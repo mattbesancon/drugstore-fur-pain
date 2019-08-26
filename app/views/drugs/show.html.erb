@@ -1,6 +1,7 @@
 <div class="container">
   <h1><%= @drug.name %></h1>
   <%= link_to "Back to drugs", root_path %>
+  <%= link_to "Delete", @drug, :confirm => "Are you sure?", :method => :delete %>
   <br>
   <%= cl_image_tag @drug.photo, height: 300, width: 400, crop: :fill %>
 
