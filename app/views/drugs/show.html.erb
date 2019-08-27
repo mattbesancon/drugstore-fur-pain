@@ -36,8 +36,6 @@
 
 <div class="container">
   <h1><%= @drug.name %></h1>
-  <%= link_to "Back to drugs", root_path %>
-  <%= link_to "Delete", @drug, :method => :delete %>
   <br>
   <%= cl_image_tag @drug.photo, height: 300, width: 400, crop: :fill %>
 
@@ -71,6 +69,9 @@
 
 <%= render "reviews/new", drug: @drug, review: @review %>
 
+<div class="container-options">
+  <span><%= link_to "Back to drugs", root_path %></span>
+  <span><%= link_to "Delete", @drug, :method => :delete %></span>
 </div>
 
 <div class="footer">
