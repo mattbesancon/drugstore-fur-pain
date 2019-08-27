@@ -34,44 +34,46 @@
   </div>
 </nav>
 
-<div class="container">
+<div class="main-container">
   <h1><%= @drug.name %></h1>
   <br>
-  <%= cl_image_tag @drug.photo, height: 300, width: 400, crop: :fill %>
+  <%= cl_image_tag @drug.photo, height: 300, width: 400, crop: :fill%>
+  <br>
 
-<div class="row">
-  <div class="col-sm-12">
-    <h3>Drug</h3>
-    <table class="table table-bordered">
-      <tbody>
-        <thead>
-          <th> <%= @drug.name %> </th>
-          <th> <%= @drug.content %> </th>
-          <th> <%= @drug.price %> </th>
-        </thead>
-      </tbody>
-    </table>
+  <div class="row">
+    <div class="col-sm-12">
+      <table class="table table-bordered">
+        <tbody>
+          <thead>
+            <th> <%= @drug.name %> </th>
+            <th> <%= @drug.content %> </th>
+            <th> <%= @drug.price %> </th>
+          </thead>
+        </tbody>
+      </table>
+    </div>
   </div>
-</div>
 
-<h3>Reviews</h3>
-<% if @drug.reviews.empty? %>
-  <p>Be the first to let a review</p>
-<% else %>
-  <ul class="list-group">
-    <% @drug.reviews.each do |review| %>
-      <li class="list-group-item d-flex justify-content-between align-items-center">
-        <%= review.content %>
-      </li>
+  <div class="reviews-container">
+    <h3>Reviews</h3>
+    <% if @drug.reviews.empty? %>
+      <p>Be the first to let a review</p>
+    <% else %>
+      <ul class="list-group">
+        <% @drug.reviews.each do |review| %>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <%= review.content %>
+          </li>
+        <% end %>
+      </ul>
     <% end %>
-  </ul>
-<% end %>
+    <%= render "reviews/new", drug: @drug, review: @review %>
+  </div>
 
-<%= render "reviews/new", drug: @drug, review: @review %>
-
-<div class="container-options">
-  <span><%= link_to "Back to drugs", root_path %></span>
-  <span><%= link_to "Delete", @drug, :method => :delete %></span>
+  <div class="container-options">
+    <span><button type="button" class="btn btn-light btn-block"><%= link_to "Back to drugs", root_path %></button></span>
+    <span><button type="button" class="btn btn-light btn-block"><%= link_to "Delete", @drug, :method => :delete %></button></span>
+  </div>
 </div>
 
 <div class="footer">
