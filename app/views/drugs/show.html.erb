@@ -35,10 +35,13 @@
 </nav>
 
 <div class="main-container">
-  <h1><%= @drug.name %></h1>
-  <br>
-  <%= cl_image_tag @drug.photo, height: 300, width: 400, crop: :fill%>
-  <br>
+  <div class="card-product">
+    <img><%= cl_image_tag @drug.photo, height: 300, width: 400, crop: :fill%></img>
+    <div class="card-product-infos">
+      <h2><%= @drug.name %></h2>
+    </div>
+  </div>
+
 
   <div class="row">
     <div class="col-sm-12">
