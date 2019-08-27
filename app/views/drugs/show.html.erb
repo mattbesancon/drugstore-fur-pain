@@ -46,13 +46,16 @@
   <div class="row">
     <div class="col-sm-12">
       <table class="table table-bordered">
-        <tbody>
-          <thead>
-            <th> <%= @drug.name %> </th>
-            <th> <%= @drug.content %> </th>
-            <th> <%= @drug.price %> </th>
-          </thead>
-        </tbody>
+        <tr>
+          <th>Drug</th>
+          <th>Description</th>
+          <th>Price in euros</th>
+        </tr>
+        <tr>
+          <td><%= @drug.name %></td>
+          <td><%= @drug.content %></td>
+          <td><%= @drug.price %></td>
+        </tr>
       </table>
     </div>
   </div>
