@@ -9,10 +9,16 @@
   height: 100px;
   color: rgba(0,0,0,0.3);
   margin-top: 30px;
+  position: relative;
 }
 .footer-links {
   display: flex;
   align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
 }
 .footer-links a {
   color: black;
@@ -23,9 +29,6 @@
 }
 .footer-links a:hover {
   opacity: 1;
-}
-.footer .fa-heart {
-  color: #D23333;
 }
 .card {
   margin-top: 20px;
