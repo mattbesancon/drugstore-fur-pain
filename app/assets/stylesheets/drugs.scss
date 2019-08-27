@@ -8,7 +8,7 @@
   justify-content: space-between;
   height: 200px;
   color: rgba(0,0,0,0.3);
-  margin-top: 200px;
+  margin-top: 150px;
   position: relative;
 }
 .footer-links {
@@ -40,20 +40,19 @@ th {
 }
 .container-options {
   text-align: center;
-  margin-top: 40px;
+  margin: 40px auto;
 }
 span + span {
   margin-left: 300px;
 }
 .reviews-container {
   text-align: center;
-  margin-left: 100px;
-  margin-right: 100px;
+  margin: 40px auto;
 }
 .main-container {
   text-align: center;
-  margin-left: 100px;
-  margin-right: 100px;
+  width: 800px;
+  margin: 40px auto;
 }
 .row {
   margin-top: 20px;
@@ -66,6 +65,12 @@ span + span {
   display: flex;
   align-items: center;
   margin-top: 40px;
+}
+.table {
+  text-align: center;
+  margin: 40px auto;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 .card-product img {
@@ -82,4 +87,15 @@ span + span {
 
 .card-product .card-product-infos {
   padding: 16px;
+}
+.btn-light {
+  background-color: #6B72E1;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 2px;
+  box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
+}
+.btn-light:hover {
+  background-color: black;
+  color: white;
 }
