@@ -24,6 +24,13 @@
     </div>
   </div>
 
+  <div class="purchase-container">
+    <%= form_tag orders_path do %>
+      <%= hidden_field_tag 'drug_id', @drug.id %>
+      <%= submit_tag 'Purchase', class: 'btn btn-primary btn-block' %>
+    <% end %>
+  </div>
+
   <div class="reviews-container">
     <% if @drug.reviews.empty? %>
     <% else %>
