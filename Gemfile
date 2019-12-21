@@ -22,6 +22,7 @@ gem 'mini_magick', '~> 4.8'
 gem 'capistrano-rails', group: :development
 
 gem 'bootsnap', '>= 1.1.0', require: false
+gem "rack", ">= 2.0.8"
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
