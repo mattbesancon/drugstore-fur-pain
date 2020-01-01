@@ -6,7 +6,6 @@
     </div>
   </div>
 
-
   <div class="row">
     <div class="col-sm-12">
       <table class="table table-bordered">
@@ -27,9 +26,11 @@
   <div class="purchase-container">
     <%= form_tag orders_path do %>
       <%= hidden_field_tag 'drug_id', @drug.id %>
-      <%= submit_tag 'Purchase', class: 'btn btn-primary btn-block' %>
+      <%= submit_tag 'Purchase', class: "btn btn-outline-primary" %>
     <% end %>
   </div>
+
+<br>
 
   <div class="reviews-container">
     <% if @drug.reviews.empty? %>
