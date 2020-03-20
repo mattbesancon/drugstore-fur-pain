@@ -26,6 +26,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem "rack", ">= 2.0.8"
 gem 'stripe'
 gem 'stripe_event'
+gem 'temple', '~> 0.8.1'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
