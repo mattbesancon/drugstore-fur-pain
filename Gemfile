@@ -12,7 +12,7 @@ gem 'webpacker'
 gem 'mini_racer', platforms: :ruby
 gem 'activesupport', '~> 6.0.2.1'
 
-gem 'coffee-rails', '~> 4.2'
+gem 'coffee-rails', '~> 5.0.0'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'redis', '~> 4.0'
