@@ -1,8 +1,8 @@
 class OrdersController < ApplicationController
     def create
         drug = Drug.find(params[:drug_id])
-        user = User.find(params[:user_id])
-        order  = Order.create!(drug: drug, drug_sku: drug.name, amount: drug.price, state: 'pending', user: user)
+        # user = User.find(params[:user_id])
+        order = Order.create!(drug: drug, drug_sku: drug.name, amount: drug.price, state: 'pending', user: user)
         
         session = Stripe::Checkout::Session.create(
             payment_method_types: ['card'],
