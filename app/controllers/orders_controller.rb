@@ -1,7 +1,7 @@
 class OrdersController < ApplicationController
     def create
         drug = Drug.find(params[:drug_id])
-        order  = Order.create!(drug: drug, drug_sku: drug.name, amount: drug.price, state: 'pending', user: current_user)
+        order  = Order.create!(drug: drug, drug_sku: drug.name, amount: drug.price, state: 'pending', user: user)
         
         session = Stripe::Checkout::Session.create(
             payment_method_types: ['card'],
@@ -21,6 +21,6 @@ class OrdersController < ApplicationController
     end
 
     def show
-        @order = current_user.orders.find(params[:id])
+        @order = user.orders.find(params[:id])
     end
 end
