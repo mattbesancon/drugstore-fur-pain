@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'users/index'
   root to: 'drugs#index'
   resources :orders, only: [:show, :create] do
     resources :payments, only: :new
