@@ -27,6 +27,7 @@ gem "rack", ">= 2.0.8"
 gem 'stripe'
 gem 'stripe_event'
 gem 'temple', '~> 0.8.1'
+gem 'bundler', '~>2.1.4'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
