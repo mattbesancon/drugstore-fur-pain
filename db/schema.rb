@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_05_135940) do
+ActiveRecord::Schema.define(version: 2020_04_06_133657) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,21 +45,6 @@ ActiveRecord::Schema.define(version: 2020_04_05_135940) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["drug_id"], name: "index_reviews_on_drug_id"
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "email"
-    t.string "encrypted_password"
-    t.string "reset_password_token"
-    t.time "reset_password_sent_at"
-    t.time "remember_created_at"
-    t.integer "sign_in_count"
-    t.time "current_sign_in_at"
-    t.time "last_sign_in_at"
-    t.string "current_sign_in_ip"
-    t.string "last_sign_in_ip"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
   add_foreign_key "orders", "drugs"
