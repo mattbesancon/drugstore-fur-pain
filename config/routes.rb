@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   devise_for :users
   get 'users/index'
   get 'users/show'
-  get 'users/index'
   root to: 'drugs#index'
   resources :orders, only: [:show, :create] do
     resources :payments, only: :new
