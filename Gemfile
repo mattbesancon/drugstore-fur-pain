@@ -61,3 +61,4 @@ gem 'font-awesome-sass'
 gem 'nokogiri', '~> 1.10.4'
 gem "loofah", ">= 2.3.1"
 gem 'money-rails'
+gem 'bundler', '~> 2.1.4'
