@@ -44,10 +44,8 @@ end
 group :test do
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
-
   gem 'chromedriver-helper'
 end
-
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
@@ -61,4 +59,3 @@ gem 'font-awesome-sass'
 gem 'nokogiri', '~> 1.10.4'
 gem "loofah", ">= 2.3.1"
 gem 'money-rails'
-gem 'bundler', '~> 2.1.4'
