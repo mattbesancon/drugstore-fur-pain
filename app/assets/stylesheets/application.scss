@@ -13,7 +13,6 @@
  *= require_tree .
  *= require_self
  */
-@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
 
 // Graphical variables
 @import "config/fonts";
@@ -21,7 +20,7 @@
 @import "config/bootstrap_variables";
 
 // External libraries
-@import "../../../node_modules/bootstrap/scss/bootstrap.scss"; // picks it up in node_modules!
+@import "bootstrap/scss/bootstrap"; // picks it up in node_modules!
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
