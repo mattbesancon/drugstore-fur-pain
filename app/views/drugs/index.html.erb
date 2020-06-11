@@ -1,4 +1,5 @@
-<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= image_tag("pills.jpg") %>');">
+<% background-image_url = "https://isorepublic.com/wp-content/uploads/2018/11/tablets-pills.jpg" %>
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= background-image_url %>');">
   <div class="banner-content">
     <h1>My fun drugstore</h1>
     <p>Get your high. Anywhere. Everywhere.</p>
@@ -13,7 +14,7 @@
         <% if drug.photo? %>
           <% background_url = cl_image_path drug.photo, width: 400, height: 500, crop: :fill %>
         <% else %>
-          <% background_url = 'https://source.unsplash.com/500x400/?drug' %>
+          <% background_url = "https://source.unsplash.com/500x400/?drug" %>
         <% end %>
         <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= background_url %>');">
           <div class="card-description">
