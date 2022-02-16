@@ -1,9 +1,9 @@
 <div class="main-container">
   <div class="card-product">
-    <% if @drug.photo.blank? %>
-      <%= image_tag("https://source.unsplash.com/500x400/?drug") %>
+    <% if @drug.photo.attached? %>
+      <%= cl_image_tag(@drug.photo.key, height: 300, width: 400, crop: :fill) %>
     <% else %>
-      <%= cl_image_tag(@drug.photo, height: 300, width: 400, crop: :fill) %>
+      <%= image_tag("https://source.unsplash.com/500x400/?drug") %>
     <% end %>
     <div class="card-product-infos">
       <h2><%= @drug.name %></h2>
