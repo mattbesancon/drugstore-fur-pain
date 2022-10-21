@@ -54,6 +54,6 @@ gem 'cloudinary', '~> 1.16.0'
 gem 'pundit'
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
-gem 'nokogiri', '~> 1.10.4'
+gem 'nokogiri', '~> 1.13.9'
 gem "loofah", ">= 2.3.1"
 gem 'money-rails'
